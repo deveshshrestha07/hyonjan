@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyonjan Electrical Engineering Fabricator Pvt. Ltd. — Prior Projects</title>
+  <meta name="description" content="Showcase of prior projects by Hyonjan Electrical Engineering Fabricator Pvt. Ltd." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Archivo+Black&display=swap" rel="stylesheet">
+
+  <!-- Theme CSS (same bundle you use everywhere) -->
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/aos.css">
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/plugins/mobile.css">
+  <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+  <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+  <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JQuery first (theme needs it) -->
+  <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+
+  <!-- Page styles (scoped to avoid collisions) -->
+  <style id="prior-projects-styles">
+    :root{
+      --pp-bg:#0b0f14; --pp-panel:#0f1620; --pp-panel-2:#111a25; --pp-text:#e6eef7; --pp-muted:#9cb3c9;
+      --pp-brand:#41d1ff; --pp-brand-2:#7effa7; --pp-card:#0f1822; --pp-chip:#152231; --pp-stroke:#1e2a3a;
+      --pp-glow:0 10px 40px rgba(65,209,255,.25); --pp-radius:18px; --pp-header-h:92px;
+    }
+    body.prior-projects{
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(65,209,255,.08), transparent),
+        radial-gradient(900px 500px at 90% 10%, rgba(126,255,167,.08), transparent),
+        var(--pp-bg);
+      color: var(--pp-text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* keep page content clear of sticky header */
+    .pp-wrap{ padding-top: calc(var(--pp-header-h) + 16px); }
+
+    /* Local header (inside hero area) */
+    .pp-hero{ max-width:1200px; margin: 0 auto 8px; padding: 0 20px 8px; }
+    .pp-overline{ color:var(--pp-muted); font-weight:700; letter-spacing:2px; text-transform:uppercase; font-size:12px; }
+    .pp-h1{ font-family:"Archivo Black", Inter, sans-serif; font-size:clamp(28px,4vw,56px); line-height:1.05; margin:10px 0 8px; }
+    .pp-hero p{ color:var(--pp-muted); max-width:75ch; margin:8px 0 0; }
+
+    /* Controls */
+    .pp-controls{ max-width:1200px; margin:16px auto 0; padding:0 20px 18px; display:grid; grid-template-columns:1fr; gap:10px; }
+    @media(min-width:780px){ .pp-controls{ grid-template-columns: 2fr 1fr 1fr auto; align-items:center; } }
+    .pp-control{
+      background:linear-gradient(180deg, var(--pp-panel), var(--pp-panel-2));
+      border:1px solid var(--pp-stroke); border-radius:var(--pp-radius);
+      padding:10px 12px; display:flex; align-items:center; gap:10px; position:relative;
+    }
+    .pp-control input,.pp-control select{
+      flex:1; background:transparent; border:none; color:var(--pp-text);
+      font-size:14px; outline:none; min-height:36px;
+    }
+    /* make selects feel native & clickable; keep our chevron purely decorative */
+    .pp-control select{ appearance:auto; -webkit-appearance: none; cursor:pointer; }
+    .pp-control option{ background:var(--pp-panel-2); color:var(--pp-text); }
+    .pp-control i{ position:absolute; right:12px; pointer-events:none; opacity:.9; }
+
+    .pp-btn{
+      background:linear-gradient(135deg,var(--pp-brand),var(--pp-brand-2));
+      color:#021018; border:0; font-weight:800; letter-spacing:.3px;
+      padding:12px 16px; border-radius:14px; cursor:pointer; box-shadow:var(--pp-glow);
+    }
+    .pp-btn:active{ transform:translateY(1px); }
+
+    /* Chips */
+    .pp-chips{ max-width:1200px; margin:0 auto; padding:0 20px; display:flex; flex-wrap:wrap; gap:8px; }
+    .pp-chip{ background:var(--pp-chip); border:1px solid var(--pp-stroke); padding:10px 14px; border-radius:999px; color:var(--pp-muted); font-weight:700; cursor:pointer; user-select:none; }
+    .pp-chip.active{ background:linear-gradient(135deg, rgba(65,209,255,.12), rgba(126,255,167,.12)); color:var(--pp-text); border-color:rgba(126,255,167,.35); box-shadow: inset 0 0 0 1px rgba(65,209,255,.25); }
+
+    /* Grid */
+    .pp-grid{ max-width:1200px; margin:12px auto 80px; padding:0 20px; display:grid; grid-template-columns:1fr; gap:14px; }
+    @media(min-width:620px){ .pp-grid{ grid-template-columns:repeat(2,1fr); } }
+    @media(min-width:980px){ .pp-grid{ grid-template-columns:repeat(3,1fr); } }
+
+    .pp-card{
+      position:relative; overflow:hidden; border-radius:var(--pp-radius);
+      background:linear-gradient(180deg, rgba(65,209,255,.06), transparent 120%), var(--pp-card);
+      border:1px solid var(--pp-stroke); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      min-height:140px;
+    }
+    .pp-card:hover{ transform:translateY(-3px); box-shadow:0 14px 40px rgba(0,0,0,.35); border-color:rgba(126,255,167,.35); }
+    .pp-card-inner{ padding:16px; display:grid; gap:10px; }
+    .pp-tag{ display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px; color:var(--pp-text); }
+    .pp-title{ font-weight:800; font-size:16px; line-height:1.2; }
+    .pp-sub{ color:var(--pp-muted); font-size:13px; }
+    .pp-empty{ text-align:center; color:var(--pp-muted); padding:40px 0; }
+
+    /* make the theme header stick height predictable */
+    .header-area.header-sticky{ min-height: var(--pp-header-h); }
+    .header-btn1{ white-space:nowrap; }
+  </style>
+</head>
+
+<body class="homepage1-body tg-heading-subheading animation-style3 prior-projects">
+
+  <!-- ===== THEME PRELOADER / PROGRESS (optional, same as other pages) ===== -->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="assets/img/logo/prelodaer.png" alt=""></div>
+    </div>
+  </div>
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== THEME HEADER (Desktop) ===== -->
+    <header>
+    <div class="header-area homepage1 header header-sticky d-none d-lg-block " id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-elements">
+              <div class="site-logo">
+                <a href="index.html"><img src="assets/img/logo/main logo.png" alt=""></a>
+              </div>
+              <div class="main-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>                
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="partnership.html">Partnership</a></li>
+                  <li><a href="Products&Services.html">Product & Services</a></li>
+                  <li><a href="#.html">Our Project <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-padding">
+                      <li><a href="priorproject.html">Prior Project</a></li>
+                      <li><a href="ongoingproject.html">Ongoing Project</a></li>
+                    </ul>
+                  </li>
+                   <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+              </div>
+              <div class="btn-area">
+                <a href="contact.html" class="header-btn1">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THEME MOBILE HEADER ===== -->
+  <div class="mobile-header mobile-haeder1 d-block d-lg-none">
+    <div class="container-fluid">
+      <div class="col-12">
+        <div class="mobile-header-elements">
+          <div class="mobile-logo"><a href="index.html"><img src="assets/img/logo/logo1.png" alt=""></a></div>
+          <div class="mobile-nav-icon dots-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-sidebar mobile-sidebar1">
+    <div class="logosicon-area">
+      <div class="logos"><img src="assets/img/logo/logo1.png" alt=""></div>
+      <div class="menu-close"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <div class="mobile-nav mobile-nav1">
+      <ul class="mobile-nav-list nav-list1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Services</a>
+          <ul class="sub-menu">
+            <li><a href="service.html">Service One</a></li>
+            <li><a href="service-left.html">Service Left</a></li>
+            <li><a href="service-right.html">Service Right</a></li>
+            <li><a href="service-single.html">Service Single</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a>
+          <ul class="sub-menu">
+            <li><a href="case.html">Case Study One</a></li>
+            <li><a href="case-left.html">Case Study Left</a></li>
+            <li><a href="case-right.html">Case Study Right</a></li>
+            <li><a href="case-single.html">Case Study Single</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="pricing.html">Pricing Plan</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="404.html">404</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="allmobilesection">
+        <a href="contact.html" class="header-btn1">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="pp-wrap">
+    <!-- Hero -->
+    <section class="pp-hero">
+      <span class="pp-overline">I. Prior Projects</span>
+      <h1 class="pp-h1">Decades of delivery across Nepal &amp; beyond</h1>
+      <p>Hyonjan Electrical Engineering Fabricator Pvt. Ltd. has an extensive portfolio of successful projects, showcasing our expertise across commercial, healthcare, hospitality, residential, industrial, and public-sector works, as well as international collaborations and hydropower initiatives.</p>
+    </section>
+
+    <!-- Controls -->
+    <section class="pp-controls" aria-label="Project controls">
+      <label class="pp-control" aria-label="Search projects">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10.5" cy="10.5" r="7" stroke="currentColor" stroke-width="2"/></svg>
+        <input id="q" type="search" placeholder="Search projects by name…" autocomplete="off" />
+      </label>
+
+      <label class="pp-control" aria-label="Filter by category">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 5h18M6 12h12M10 19h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <select id="category">
+          <option value="all">All categories</option>
+        </select>
+        <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+      </label>
+
+      <label class="pp-control" aria-label="Sort projects">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M8 7l4-4 4 4M8 17l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <select id="sort">
+          <option value="az">A → Z</option>
+          <option value="za">Z → A</option>
+        </select>
+        <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+      </label>
+
+      <button id="clear" class="pp-btn" title="Reset filters">Reset</button>
+    </section>
+
+    <!-- Chips -->
+    <section class="pp-chips" id="chips" role="listbox" aria-label="Quick filters"></section>
+
+    <!-- Grid -->
+    <section class="pp-grid" id="grid" aria-live="polite"></section>
+    <div id="empty" class="pp-empty" hidden>No results. Try a different keyword or clear filters.</div>
+  </main>
+
+  <!-- ===== THEME FOOTER ===== -->
+  <div class="footer1-section-area">
+    <div class="container">
+      <div class="row"><div class="col-lg-12">
+        <div class="footer-logo-content sp4">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="logo-content">
+                <img src="assets/img/logo/logo1.png" alt="">
+                <p>Our goal is to demystify the process, address your concerns, and empower you with the knowledge to embark.</p>
+                <ul>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-1 d-lg-block d-none"></div>
+            <div class="col-lg-2 col-md-6">
+              <div class="space30 d-block d-md-none"></div>
+              <div class="service-heading">
+                <h2>Electricity service</h2>
+                <ul>
+                  <li><a href="#">Air Conditioning</a></li>
+                  <li><a href="#">Electrical Panels</a></li>
+                  <li><a href="#">Security System</a></li>
+                  <li><a href="#">Indoor Lighting</a></li>
+                  <li><a href="#">Electrical Services</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-1 d-lg-block d-none"></div>
+            <div class="col-lg-2 col-md-6">
+              <div class="space30 d-md-block d-lg-none"></div>
+              <div class="service-heading">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="service.html">Service</a></li>
+                  <li><a href="partnership.html">Partnership</a></li>
+                  <li><a href="testimonials.html">Testimonial</a></li>
+                  <li><a href="contact.html">Contact US</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="space30 d-md-block d-lg-none"></div>
+              <div class="service-heading contact">
+                <h2>Contact US</h2>
+                <ul>
+                  <li><a href="tel:+880123456789"><span class="icons"><i class="fa-solid fa-phone"></i></span><span>+880 123 456 789</span></a></li>
+                  <li><a href="mailto:info@mail.com"><span class="icons"><i class="fa-solid fa-envelope"></i></span><span>info@mail.com</span></a></li>
+                  <li><a href="#"><span class="icons"><i class="fa-solid fa-location-dot"></i></span><span>8502 Preston Rd. Inglewoo <br> Maine 98380</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright"><p>© <span id="pp-year"></span> Hyonjan Electrical Engineering Fabricator Pvt. Ltd. All Rights Reserved.</p></div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ===== Theme JS ===== -->
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/counter.js"></script>
+  <script src="assets/js/plugins/gsap.min.js"></script>
+  <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+  <script src="assets/js/plugins/Splitetext.js"></script>
+  <script src="assets/js/plugins/sidebar.js"></script>
+  <script src="assets/js/plugins/magnific-popup.js"></script>
+  <script src="assets/js/plugins/mobilemenu.js"></script>
+  <script src="assets/js/plugins/owlcarousel.min.js"></script>
+  <script src="assets/js/plugins/gsap-animation.js"></script>
+  <script src="assets/js/plugins/nice-select.js"></script>
+  <script src="assets/js/plugins/slick-slider.js"></script>
+  <script src="assets/js/plugins/waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- ===== Page JS ===== -->
+  <script>
+    // Anti–Nice Select Guard (prevents theme from hijacking our <select>s)
+    (function ensureNativeSelects(){
+      const ids = ['category','sort'];
+      const fix = (sel)=>{
+        if(!sel) return;
+        // remove any .nice-select sibling and unhide the real select
+        const parent = sel.parentElement;
+        const clone = parent && parent.querySelector('.nice-select');
+        if(clone) clone.remove();
+        sel.style.removeProperty('display');
+        sel.style.visibility = 'visible';
+        sel.style.opacity = '1';
+      };
+      ids.forEach(id=>fix(document.getElementById(id)));
+      // watch for future injections
+      const obs = new MutationObserver(()=> ids.forEach(id=>fix(document.getElementById(id))));
+      obs.observe(document.body,{childList:true,subtree:true});
+      // also nuke any existing .nice-select globally (defensive)
+      document.querySelectorAll('.nice-select').forEach(n=>n.remove());
+    })();
+
+    // Data
+    const PROJECTS = [
+      { name: "Labim Mall", category: "Commercial Complexes" },
+      { name: "Kathmandu Mall", category: "Commercial Complexes" },
+      { name: "NLIC City Center", category: "Commercial Complexes" },
+      { name: "One Stop Mall, Itahari", category: "Commercial Complexes" },
+      { name: "National Health Care, Birgunj", category: "Healthcare Facilities" },
+      { name: "Neuro Hospital, Kathmandu", category: "Healthcare Facilities" },
+      { name: "Chitwan Medical College, Chitwan", category: "Healthcare Facilities" },
+      { name: "T.U. Teaching Hospital", category: "Healthcare Facilities" },
+      { name: "Manipal College of Medical Sciences, Pokhara", category: "Healthcare Facilities" },
+      { name: "Bir Hospital", category: "Healthcare Facilities" },
+      { name: "Kanti Children’s Hospital", category: "Healthcare Facilities" },
+      { name: "National Hospital & Research Center", category: "Healthcare Facilities" },
+      { name: "National Pharmaceuticals, Jitpur", category: "Healthcare Facilities" },
+      { name: "Accord Pharmaceuticals", category: "Healthcare Facilities" },
+      { name: "Maruti Pharma, Birgunj", category: "Healthcare Facilities" },
+      { name: "Deurali-Janta Pharmaceuticals Pvt. Ltd.", category: "Healthcare Facilities" },
+      { name: "National City Hospital (South Asia)", category: "Healthcare Facilities" },
+      { name: "Simca Lab", category: "Healthcare Facilities" },
+      { name: "Hotel Del’ Annapurna", category: "Hospitality Industry" },
+      { name: "Radisson Hotel Kathmandu", category: "Hospitality Industry" },
+      { name: "The Soltee Kathmandu", category: "Hospitality Industry" },
+      { name: "Hotel Yak & Yeti Kathmandu", category: "Hospitality Industry" },
+      { name: "Godawari Village Resort", category: "Hospitality Industry" },
+      { name: "Landmark Hotel, Chitwan", category: "Hospitality Industry" },
+      { name: "Dhulikhel Mountain Resort", category: "Hospitality Industry" },
+      { name: "Kathmandu Guest House", category: "Hospitality Industry" },
+      { name: "Lazimpat Hotel Complex", category: "Hospitality Industry" },
+      { name: "Prestige Apartments, Dhumbarahi", category: "Residential Projects" },
+      { name: "Downtown Apartments", category: "Residential Projects" },
+      { name: "Sun Rise Apartments", category: "Residential Projects" },
+      { name: "City Scapes", category: "Residential Projects" },
+      { name: "Downtown Residency, Dhapakhel", category: "Residential Projects" },
+      { name: "Chaudhary Group", category: "Industrial Projects" },
+      { name: "Bottlers Nepal, Balaju", category: "Industrial Projects" },
+      { name: "Panchakanya Group", category: "Industrial Projects" },
+      { name: "Hama Steels", category: "Industrial Projects" },
+      { name: "Dabur Nepal", category: "Industrial Projects" },
+      { name: "Nepal Gas", category: "Industrial Projects" },
+      { name: "DDC", category: "Industrial Projects" },
+      { name: "Baltra Appliances", category: "Industrial Projects" },
+      { name: "Trishakti Cement, Birgunj", category: "Industrial Projects" },
+      { name: "Narayani Cement", category: "Industrial Projects" },
+      { name: "Khukri Rum, Balaju (Nepal Distilleries Pvt. Ltd.)", category: "Industrial Projects" },
+      { name: "Gorkha Brewery", category: "Industrial Projects" },
+      { name: "San Miguel Beer Factory, Bharatpur", category: "Industrial Projects" },
+      { name: "Himalayan Distilleries", category: "Industrial Projects" },
+      { name: "Ambe Steel P. Ltd.", category: "Industrial Projects" },
+      { name: "Jagadamba Spinning Mills", category: "Industrial Projects" },
+      { name: "Jagadamba Enterprises P. Ltd.", category: "Industrial Projects" },
+      { name: "Shivam Cement P. Ltd.", category: "Industrial Projects" },
+      { name: "Hulas Steel P. Ltd", category: "Industrial Projects" },
+      { name: "South Asian Construction Co. P. Ltd.", category: "Industrial Projects" },
+      { name: "Hongshi Cement", category: "Industrial Projects" },
+      { name: "Huaxin Cement", category: "Industrial Projects" },
+      { name: "Multi-Tech", category: "Industrial Projects" },
+      { name: "Ashok Steel Industries", category: "Industrial Projects" },
+      { name: "UNDP", category: "Government & International Organizations" },
+      { name: "Dasharath Stadium (Rangashala), Tripureshwor", category: "Government & International Organizations" },
+      { name: "Nepal Rastra Bank", category: "Government & International Organizations" },
+      { name: "Indian Embassy", category: "Government & International Organizations" },
+      { name: "Manakamana Cable Car", category: "Government & International Organizations" },
+      { name: "N.E.A. Seventh Power Project", category: "Government & International Organizations" },
+      { name: "Shimizu Corporation, Japan", category: "International Collaborations" },
+      { name: "J.I.C.A., Japan", category: "International Collaborations" },
+      { name: "Synro, Japan", category: "International Collaborations" },
+      { name: "Ncell ICON building", category: "Additional Projects" },
+      { name: "Himalayan Bank", category: "Additional Projects" },
+      { name: "White Monastery (Seto Gumba), Swoyambhu", category: "Additional Projects" },
+      { name: "Shenchen Monastery", category: "Additional Projects" },
+      { name: "1000 Buddhas Monastery, Lumbini", category: "Additional Projects" },
+      { name: "Solu Hydro Power", category: "Additional Projects" },
+      { name: "Nilgiri Hydro Power P. Ltd.", category: "Additional Projects" },
+      { name: "Super Madi Hydro Power Ltd.", category: "Additional Projects" },
+      { name: "Bindyabasini Hydro Power Company", category: "Additional Projects" },
+      { name: "United Education Academy, Nepalgunj", category: "Additional Projects" },
+      { name: "Arun-3 Power Development Company P. Ltd.", category: "Additional Projects" },
+    ];
+
+    const ICONS = {
+      "Commercial Complexes": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 21V9l9-6 9 6v12H3z" stroke="currentColor" stroke-width="2"/><path d="M9 21V9h6v12" stroke="currentColor" stroke-width="2"/></svg>`,
+      "Healthcare Facilities": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v6M9 5h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="8" width="18" height="13" rx="3" stroke="currentColor" stroke-width="2"/></svg>`,
+      "Hospitality Industry": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 11h18M4 7h16M6 21v-6h12v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+      "Residential Projects": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 10l9-7 9 7" stroke="currentColor" stroke-width="2"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="2"/></svg>`,
+      "Industrial Projects": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 21h18v-6l-6-3v3l-6-3v3l-6-3v9z" stroke="currentColor" stroke-width="2"/></svg>`,
+      "Government & International Organizations": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 3l8 4v3H4V7l8-4zM4 21h16M6 10v9M10 10v9M14 10v9M18 10v9" stroke="currentColor" stroke-width="2"/></svg>`,
+      "International Collaborations": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5v19M5 7a20 20 0 0 0 14 0M5 17a20 20 0 0 1 14 0" stroke="currentColor" stroke-width="2"/></svg>`,
+      "Additional Projects": `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+    };
+
+    // Elements
+    const grid = document.getElementById('grid');
+    const q = document.getElementById('q');
+    const category = document.getElementById('category');
+    const sort = document.getElementById('sort');
+    const clearBtn = document.getElementById('clear');
+    const empty = document.getElementById('empty');
+    const chips = document.getElementById('chips');
+
+    // Helpers
+    const unique = arr => [...new Set(arr)];
+    const esc = s => s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m]));
+
+    function renderCategories(){
+      category.innerHTML = '<option value="all">All categories</option>';
+      const cats = unique(PROJECTS.map(p => p.category)).sort();
+      for(const c of cats){
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        category.appendChild(opt);
+      }
+      chips.innerHTML = '';
+      chips.appendChild(makeChip('All','all'));
+      for(const c of cats) chips.appendChild(makeChip(c,c));
+      setActiveChip('all');
+    }
+
+    function makeChip(label, value){
+      const el = document.createElement('div');
+      el.className = 'pp-chip';
+      el.textContent = label;
+      el.dataset.value = value;
+      el.addEventListener('click', () => { category.value = value; setActiveChip(value); update(); });
+      return el;
+    }
+    function setActiveChip(val){
+      [...chips.children].forEach(c => c.classList.toggle('active', c.dataset.value === val));
+    }
+
+    function filterAndSort(){
+      const term = q.value.trim().toLowerCase();
+      const cat = category.value;
+      let list = PROJECTS.filter(p => (cat === 'all' || p.category === cat) && p.name.toLowerCase().includes(term));
+      list.sort((a,b) => sort.value === 'az' ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
+      return list;
+    }
+
+    function card(item){
+      const el = document.createElement('article');
+      el.className = 'pp-card';
+      el.innerHTML = `
+        <div class="pp-card-inner">
+          <span class="pp-tag">${ICONS[item.category]||''}<span>${item.category}</span></span>
+          <div class="pp-title">${esc(item.name)}</div>
+          <div class="pp-sub">Completed by Hyonjan Electrical Engineering Fabricator Pvt. Ltd.</div>
+        </div>`;
+      return el;
+    }
+
+    function update(){
+      const list = filterAndSort();
+      empty.hidden = list.length !== 0;
+      grid.innerHTML = '';
+      const frag = document.createDocumentFragment();
+      list.forEach(i => frag.appendChild(card(i)));
+      grid.appendChild(frag);
+      setActiveChip(category.value);
+    }
+
+    // Events
+    q.addEventListener('input', update);
+    category.addEventListener('change', update);
+    sort.addEventListener('change', update);
+    clearBtn.addEventListener('click', () => { q.value=''; category.value='all'; sort.value='az'; update(); q.focus(); });
+
+    // Init
+    renderCategories(); update();
+    document.getElementById('pp-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
