@@ -3,6 +3,8 @@ body, html {
   overflow-x: hidden;
 }
 
+
+
 .site-logo {
     MAX-WIDTH: 8%;
     MAX-HEIGHT: 36%;
@@ -106,6 +108,7 @@ img {
 
 .space32 {
   height: 32px;
+  padding-bottom: 50px;
 }
 
 .space34 {
@@ -1975,6 +1978,11 @@ Location:
 .hero1-section-area.about-bg-area .hero-heading-area h1 {
   margin-bottom: 0;
 }
+.main-menu ul li .dropdown-padding li a:hover {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
 .hero1-section-area.about-bg-area .hero-heading-area .backline {
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s18);
