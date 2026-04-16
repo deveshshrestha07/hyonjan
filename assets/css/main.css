@@ -7748,7 +7748,7 @@ Location:
   text-transform: capitalize;
 }
 .slider-section-area .slider-images .img1 img {
-  height: 40px;
+  height: 100px;
   width: 160px;
   -o-object-fit: contain;
      object-fit: contain;
